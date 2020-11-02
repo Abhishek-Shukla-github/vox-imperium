@@ -1,6 +1,19 @@
-import React from 'react'
+import React, { useEffect } from 'react';
+import alanBtn from "@alan-ai/alan-sdk-web";
 
+const key = "6bc4b5b917327e961429440365f7c1ce2e956eca572e1d8b807a3e2338fdd0dc/stage";
 export default function App() {
+    useEffect(() => {
+        //Initializing the alan button
+        alanBtn({
+            key: key,
+            onCommand:({ command }) => {
+                if (command === "testCommand") {
+                    alert("You code executed!");
+                }
+            }
+        })
+    },[])
     return (
         <div>
             <h1>Alan AI news Reader</h1>

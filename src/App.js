@@ -7,9 +7,10 @@ export default function App() {
         //Initializing the alan button
         alanBtn({
             key: key,
-            onCommand:({ command }) => {
-                if (command === "testCommand") {
-                    alert("You code executed!");
+            onCommand:({ command,articles }) => {
+                if (command === "newHeadlines") {
+                    console.log("Here they are");
+                    console.log(articles);
                 }
             }
         })

@@ -1,8 +1,10 @@
-import React, { useEffect } from 'react';
+import React, {useState, useEffect } from 'react';
 import alanBtn from "@alan-ai/alan-sdk-web";
+import NewsCards from './components/NewsCards/NewsCards';
 
 const key = "6bc4b5b917327e961429440365f7c1ce2e956eca572e1d8b807a3e2338fdd0dc/stage";
 export default function App() {
+    const [newsArticles, setNewsArticles] = useState([]);
     useEffect(() => {
         //Initializing the alan button
         alanBtn({
@@ -10,14 +12,14 @@ export default function App() {
             onCommand:({ command,articles }) => {
                 if (command === "newHeadlines") {
                     console.log("Here they are");
-                    console.log(articles);
+                    setNewsArticles(articles);
                 }
             }
         })
     },[])
     return (
         <div>
-            <h1>Alan AI news Reader</h1>
+            <NewsCards articles={newsArticles} />
         </div>
     )
 }

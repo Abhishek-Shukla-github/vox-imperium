@@ -19,6 +19,7 @@ export default function App() {
     },[])
     return (
         <div>
+            <h1>Vox Imperium</h1>
             <NewsCards articles={newsArticles} />
         </div>
     )

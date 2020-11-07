@@ -1,6 +1,7 @@
 import React, {useState, useEffect } from 'react';
 import alanBtn from "@alan-ai/alan-sdk-web";
 import NewsCards from './components/NewsCards/NewsCards';
+import logo from "./vox-imperium.jpg";
 
 const key = "6bc4b5b917327e961429440365f7c1ce2e956eca572e1d8b807a3e2338fdd0dc/stage";
 export default function App() {
@@ -19,7 +20,7 @@ export default function App() {
     },[])
     return (
         <div>
-            <h1>Vox Imperium</h1>
+            <img src={logo} alt="Vox Imperium"/>
             <NewsCards articles={newsArticles} />
         </div>
     )

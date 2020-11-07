@@ -7,7 +7,7 @@ export default function NewsCardStyle({ article: {author,source,title,descriptio
     return (
         <Card className={classes.card}>
             <CardActionArea href={url} target={"_blank"}>
-                <CardMedia className={classes.image} image={urlToImage} title={title}/>
+                <CardMedia className={classes.image} image={urlToImage ? urlToImage : 'https://mcdn.wallpapersafari.com/medium/49/28/vDFNZl.jpg'} title={title}/>
                 <CardContent>
                     <div className={classes.details}>
                         <Typography gutterBottom variant="subtitle2" color="textSecondary">{new Date(publishedAt).toDateString()}</Typography>

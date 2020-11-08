@@ -5,10 +5,10 @@ import { Grid, Typography, Grow,Card,CardActionArea,CardActions, CardContent, Ca
 import useStyles from "./styles.js";
 import logo from "../../vox-imperium.jpg";
 const infoCards = [
-    {color:"#6CB4EE",title:"Basic Interaction",info:"This is a voice controlled news reader!",step:"Who are you?"},
-    {color:"#89CFF0",title:"News by Categories",info:"Business, Technology ,Health ,Sports ,Science",step:"Give me the latest news regarding Sports"},
+    {color:"#6CB4EE",title:"Basic Interaction",info:"Vox Imperium is a voice controlled news reader!",step:"Who are you?"},
+    {color:"#89CFF0",title:"News by Categories",info:"Business, Technology ,Health ,Sports ,Science",step:"Give me the latest news on Sports or What are the recent headlines?"},
     {color:"#B9D9EB",title:"News by Terms",info:"Bitcoin ,Elections ,PlayStation ,JavaScript ,Artificial Intelligence",step:"What's up with JavaScript?"},
-    {color:"#B2FFFF",title:"News by Sources",info:"CNN, BBC News, Wired, New York Times, The Washington Post",step:"Give me the latest CNN news"},
+    {color:"#B2FFFF",title:"News by Sources",info:"CNN, BBC News, Wired, New York Times, The Washington Post",step:"Give me the latest news by Wired /CNN /BBC News,etc"},
 ];
 const NewsCards = ({ articles }) => {
     const xs = useMediaQuery("(max-width:300px)");

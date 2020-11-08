@@ -20,7 +20,6 @@ export default function App() {
     },[])
     return (
         <div>
-            <img src={logo} alt="Vox Imperium"/>
             <NewsCards articles={newsArticles} />
         </div>
     )

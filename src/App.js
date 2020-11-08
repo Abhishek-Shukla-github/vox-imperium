@@ -19,7 +19,7 @@ export default function App() {
         })
     },[])
     return (
-        <div>
+        <div style={{backgroundColor:"#FFFFF0"}}>
             <NewsCards articles={newsArticles} />
         </div>
     )

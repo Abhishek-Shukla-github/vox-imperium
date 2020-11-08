@@ -1,4 +1,5 @@
 import React from "react";
+import { useMediaQuery } from "@material-ui/core";
 import NewsCardStyle from "../NewsCard/NewsCardStyle";
 import { Grid, Typography, Grow,Card,CardActionArea,CardActions, CardContent, CardMedia,Button } from "@material-ui/core";
 import useStyles from "./styles.js";
@@ -10,11 +11,18 @@ const infoCards = [
     {color:"#B2FFFF",title:"News by Sources",info:"CNN, BBC News, Wired, New York Times, The Washington Post",step:"Give me the latest CNN news"},
 ];
 const NewsCards = ({ articles }) => {
+    const xs = useMediaQuery("(max-width:300px)");
+    const sm = useMediaQuery("(max-width:590px)");
     const classes = useStyles();
     if (!articles.length) {
+        const check = ()=>{
+            if(sm) return <img style={{width:"330px"}} className={classes.logo} src={logo} alt="Vox Imperium" />
+            else if(xs) return <img style={{width:"100px"}} className={classes.logo} src={logo} alt="Vox Imperium" />
+            else return <img className={classes.logo} src={logo} alt="Vox Imperium" />
+        }
         return (
             <div className={classes.infoDiv}>
-                <img xs={12} sm={6} md={4} lg={3} className={classes.logo} src={logo} alt="Vox Imperium"/>
+                {check()}
             <Grow in>
             <Grid spacing={3} container alignItems="stretch">
                 {infoCards.map((card) => {

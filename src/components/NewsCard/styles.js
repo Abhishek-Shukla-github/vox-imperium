@@ -23,5 +23,8 @@ export default makeStyles({
         display: "flex",
         justifyContent: "space-between",
         padding:"0 16px"
+    },
+    activeCard:{
+        boxShadow: "0 0 10px 5px #0047AB ",
     }
 })

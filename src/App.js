@@ -14,6 +14,7 @@ export default function App() {
                 if (command === "newHeadlines") {
                     console.log("Here they are");
                     setNewsArticles(articles);
+                    setActiveArticle(-1);
                 }
                 else if (command === "highlight") {
                     setActiveArticle((prevActiveArticle) => prevActiveArticle + 1);

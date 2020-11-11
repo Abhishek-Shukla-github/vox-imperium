@@ -3,6 +3,9 @@ export default makeStyles({
     image: {
         height: 250,
     },
+    activeCard:{
+        boxShadow: "0 0 10px 5px #0047AB",
+    },
     card: {
         flexDirection: "column",
         display: "flex",
@@ -15,14 +18,13 @@ export default makeStyles({
     details: {
         display: "flex",
         justifyContent: "space-between",
-        margin:"10px",
+        margin: "10px",
     },
     cardActions: {
         display: "flex",
         justifyContent: "space-between",
-        padding:"0 16px",
+        padding: "0 16px",
+        backgroundColor:"red",
     },
-    activeCard:{
-        boxShadow: "0 0 10px 5px #0047AB ",
-    },
+  
 })

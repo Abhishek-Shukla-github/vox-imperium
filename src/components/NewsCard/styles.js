@@ -23,7 +23,7 @@ export default makeStyles({
         padding:"0 16px",
     },
     activeCard:{
-        boxShadow: "0 0 10px 5px #0047AB",
-        borderBottom: '10px solid #22289a',
+        border: '8px solid #22289a',
     },
+    
 })

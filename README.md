@@ -16,3 +16,4 @@
 
 Setup:-
 run ``` npm i && npm start ```
+(The Voice services are now depricated , will be updated soon! :))
